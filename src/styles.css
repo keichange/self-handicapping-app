@@ -1,0 +1,374 @@
+:root {
+  color: #1f2328;
+  background: #f4f6f8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  min-height: 48px;
+  border: 1px solid #c8d0d8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2328;
+  padding: 0.72rem 0.9rem;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+a {
+  color: #265f92;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #c8d0d8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2328;
+  padding: 0.85rem;
+}
+
+textarea {
+  min-height: 88px;
+  resize: vertical;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+p,
+ol {
+  margin-top: 0;
+}
+
+h2,
+h3 {
+  margin-bottom: 0.8rem;
+}
+
+.appShell {
+  width: min(760px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem 1rem 6rem;
+}
+
+.topHeader {
+  padding: 0.5rem 0 1rem;
+}
+
+.topHeader h1 {
+  margin-bottom: 0.25rem;
+  font-size: 2.6rem;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.lead,
+.empty,
+.timelineItem p,
+.dayItem p,
+.quietPanel p {
+  color: #5c6670;
+}
+
+.eyebrow,
+.fieldTitle {
+  margin-bottom: 0.25rem;
+  color: #476176;
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.screen {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel,
+.planPanel,
+.quietPanel,
+.sheet {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid #d6dde4;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.planPanel {
+  border-left: 5px solid #2f6f73;
+}
+
+.quietPanel {
+  background: #eef4f0;
+}
+
+.quietPanel p,
+.infoText {
+  margin-bottom: 0;
+}
+
+.planHeader,
+.sectionHeader,
+.sheetHeader {
+  display: flex;
+  gap: 0.75rem;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.planHeader h2 {
+  margin-bottom: 0;
+}
+
+.actionBand {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.buttonRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.buttonColumn {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.primaryButton {
+  border-color: #2f6f73;
+  background: #2f6f73;
+  color: #ffffff;
+}
+
+.dangerButton {
+  border-color: #9c4740;
+  background: #9c4740;
+  color: #ffffff;
+}
+
+.chipGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.chip {
+  min-height: 52px;
+  padding: 0.55rem;
+  line-height: 1.25;
+}
+
+.chip.active {
+  border-color: #243b53;
+  background: #243b53;
+  color: #ffffff;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.metric {
+  display: grid;
+  gap: 0.25rem;
+  border: 1px solid #d6dde4;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0.8rem;
+}
+
+.metric span,
+.timelineItem span,
+.dayItem span {
+  color: #5c6670;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.metric strong {
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+
+.timeline,
+.dayList,
+.rankingList {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.timelineItem,
+.dayItem,
+.rankingList li {
+  display: grid;
+  grid-template-columns: 4.7rem 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  border-bottom: 1px solid #e4e9ee;
+  padding-bottom: 0.7rem;
+}
+
+.timelineItem:last-child,
+.dayItem:last-child,
+.rankingList li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timelineItem p,
+.dayItem p {
+  margin-bottom: 0;
+}
+
+.dayItem,
+.rankingList li {
+  grid-template-columns: 1fr auto;
+}
+
+.rankingList {
+  list-style: none;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  align-items: end;
+  background: rgba(16, 24, 32, 0.42);
+  padding: 1rem;
+}
+
+.sheet {
+  width: min(720px, 100%);
+  max-height: calc(100vh - 2rem);
+  margin: 0 auto;
+  overflow: auto;
+  box-shadow: 0 18px 60px rgba(16, 24, 32, 0.28);
+}
+
+.timerSheet {
+  justify-items: stretch;
+}
+
+.timerText {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  font-size: 4.2rem;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.resultPanel {
+  display: grid;
+  gap: 1rem;
+}
+
+.bottomNav {
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.55rem 0.7rem max(0.55rem, env(safe-area-inset-bottom));
+  border-top: 1px solid #d6dde4;
+  background: rgba(244, 246, 248, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.bottomNav a {
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  border: 1px solid #c8d0d8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #2e3a45;
+}
+
+.bottomNav a.active {
+  border-color: #2f6f73;
+  background: #2f6f73;
+  color: #ffffff;
+}
+
+@media (max-width: 560px) {
+  .appShell {
+    padding: 0.8rem 0.75rem 5.8rem;
+  }
+
+  .topHeader h1 {
+    font-size: 2.25rem;
+  }
+
+  .actionBand,
+  .buttonRow,
+  .summaryGrid,
+  .timelineItem,
+  .dayItem,
+  .rankingList li {
+    grid-template-columns: 1fr;
+  }
+
+  .chipGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .overlay {
+    padding: 0.5rem;
+  }
+
+  .timerText {
+    font-size: 3.5rem;
+  }
+
+  .bottomNav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: min(760px, 100%);
+  }
+}
